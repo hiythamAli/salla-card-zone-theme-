@@ -1,0 +1,48 @@
+{# CardZone Salla header #}
+<header class="cz-header" data-testid="store-header">
+  <div class="cz-topbar">
+    <div class="cz-container cz-topbar-inner">
+      <div class="cz-top-links">
+        <a href="{{ link('/pages/about') }}">عن {{ store.name }}</a>
+        <a href="{{ link('/pages/contact') }}">تواصل معنا</a>
+      </div>
+      <salla-social class="cz-social"></salla-social>
+    </div>
+  </div>
+
+  <div class="cz-navbar">
+    <div class="cz-container cz-nav-inner">
+      <a class="cz-logo" href="{{ store.url }}" data-testid="store-header-logo">
+        {% if store.logo %}
+          <img src="{{ store.logo|cdn(180) }}" alt="{{ store.name }}" />
+        {% else %}
+          <span class="cz-logo-icon">C</span>
+          <span class="cz-logo-text">كارد <b>زون</b></span>
+        {% endif %}
+      </a>
+
+      <div class="cz-search">
+        <salla-search data-testid="store-header-search" inline oval height="42"></salla-search>
+      </div>
+
+      <div class="cz-actions">
+        <salla-user-menu data-testid="store-header-user-menu" show-header show-trigger></salla-user-menu>
+        <salla-cart-summary data-testid="store-header-cart" class="cz-cart">
+          <i slot="icon" class="sicon-shopping-bag"></i>
+        </salla-cart-summary>
+      </div>
+    </div>
+  </div>
+
+  <nav class="cz-catnav">
+    <div class="cz-container cz-catnav-inner">
+      <a class="cz-cat active" href="{{ store.url }}">الرئيسية</a>
+      <a class="cz-cat" href="{{ link('/products') }}">جميع المنتجات</a>
+      {% if store.categories %}
+        {% for category in store.categories|slice(0, 6) %}
+          <a class="cz-cat" href="{{ category.url }}">{{ category.name }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </nav>
+</header>

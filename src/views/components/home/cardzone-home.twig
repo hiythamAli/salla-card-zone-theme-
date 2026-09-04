@@ -1,0 +1,56 @@
+<div class="cz-home">
+  <section class="cz-hero">
+    <div class="cz-hero-main">
+      <img src="{{ 'images/cardzone/banner.webp'|asset }}" alt="{{ store.name }}" loading="eager">
+    </div>
+    <div class="cz-hero-side">
+      <a href="{{ link('/products') }}"><img src="{{ 'images/cardzone/tappy.webp'|asset }}" alt="عروضنا"></a>
+      <a href="{{ link('/products') }}"><img src="{{ 'images/cardzone/talebanner.webp'|asset }}" alt="منتجات مميزة"></a>
+    </div>
+  </section>
+
+  <section class="cz-section">
+    <div class="cz-section-head">
+      <h2><span></span> ⚡ شحن الألعاب</h2>
+      <a href="{{ link('/products') }}">عرض الكل ◄</a>
+    </div>
+    <div class="cz-product-zone cz-games">
+      <salla-products-list data-testid="store-home-products-list" source="most_sales"></salla-products-list>
+    </div>
+  </section>
+
+  <section class="cz-section cz-banner-section">
+    <a href="{{ link('/products') }}">
+      <img class="cz-wide-banner" src="{{ 'images/cardzone/spiderbanner.webp'|asset }}" alt="CardZone">
+    </a>
+  </section>
+
+  <section class="cz-section">
+    <div class="cz-section-head">
+      <h2><span></span> 🎯 منصات الألعاب</h2>
+      <a href="{{ link('/products') }}">شاهد المنتجات ◄</a>
+    </div>
+    <div class="cz-platforms">
+      <a href="{{ link('/products') }}"><img src="{{ 'images/cardzone/playstation.webp'|asset }}" alt="PlayStation"><strong>PlayStation</strong><small>شاهد المنتجات ◄</small></a>
+      <a href="{{ link('/products') }}"><img src="{{ 'images/cardzone/xbox.png'|asset }}" alt="Xbox"><strong>Xbox</strong><small>شاهد المنتجات ◄</small></a>
+      <a href="{{ link('/products') }}"><img src="{{ 'images/cardzone/fortnite.webp'|asset }}" alt="Fortnite"><strong>Fortnite</strong><small>شاهد المنتجات ◄</small></a>
+    </div>
+  </section>
+
+  <section class="cz-section">
+    <div class="cz-section-head">
+      <h2><span></span> 📺 لا توقف مشاهدتك</h2>
+      <a href="{{ link('/products') }}">اكتشف المزيد ◄</a>
+    </div>
+    <div class="cz-product-zone">
+      <salla-products-list data-testid="store-home-subscriptions-list" source="latest"></salla-products-list>
+    </div>
+  </section>
+
+  <section class="cz-section cz-trust">
+    <div class="cz-trust-card"><b>⚡ تسليم سريع</b><span>منتجات رقمية تصل إليك بسرعة</span></div>
+    <div class="cz-trust-card"><b>🔒 دفع آمن</b><span>عمليات دفع موثوقة وآمنة</span></div>
+    <div class="cz-trust-card"><b>💬 دعم متواصل</b><span>نحن هنا لمساعدتك</span></div>
+    <div class="cz-trust-card"><b>✓ منتجات موثوقة</b><span>تجربة شراء سهلة وموثوقة</span></div>
+  </section>
+</div>

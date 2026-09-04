@@ -1,0 +1,48 @@
+
+/* CardZone theme layer */
+:root{
+ --cz-bg:#0a0e1a;--cz-bg2:#0f1528;--cz-card:#131928;--cz-card-h:#1a2235;
+ --cz-gold:#f5c518;--cz-blue:#1a6dff;--cz-purple:#7c3aed;--cz-text:#fff;
+ --cz-sec:#8b9cc8;--cz-border:#1e2d4a;
+}
+body.theme-raed{background:var(--cz-bg);color:var(--cz-text)}
+.cz-container{max-width:1280px;margin:auto;padding:0 20px}
+.cz-header{position:relative;z-index:50;background:var(--cz-bg)}
+.cz-topbar{background:#0d1220;border-bottom:1px solid var(--cz-border);padding:7px 0;font-size:12px}
+.cz-topbar-inner,.cz-nav-inner,.cz-catnav-inner{display:flex;align-items:center;justify-content:space-between}
+.cz-top-links{display:flex;gap:18px}.cz-top-links a{color:var(--cz-sec)}.cz-top-links a:hover{color:var(--cz-gold)}
+.cz-navbar{background:rgba(10,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--cz-border);position:sticky;top:0}
+.cz-nav-inner{height:68px;gap:18px}
+.cz-logo{display:flex;align-items:center;gap:9px;min-width:150px}.cz-logo img{max-height:46px;width:auto}
+.cz-logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--cz-blue),var(--cz-purple));display:grid;place-items:center;font-weight:900}
+.cz-logo-text{font-size:20px;font-weight:900}.cz-logo-text b{color:var(--cz-gold)}
+.cz-search{flex:1;max-width:500px}.cz-search salla-search{--salla-search-bg:var(--cz-card)}
+.cz-actions{display:flex;align-items:center;gap:8px}.cz-cart{margin:0!important}
+.cz-catnav{background:var(--cz-bg2);border-bottom:1px solid var(--cz-border);overflow:auto}
+.cz-catnav-inner{justify-content:flex-start}.cz-cat{padding:10px 15px;color:var(--cz-sec);font-size:12px;font-weight:800;white-space:nowrap;border-bottom:2px solid transparent}
+.cz-cat:hover,.cz-cat.active{color:var(--cz-gold);border-color:var(--cz-gold)}
+.cz-home{padding-bottom:50px;animation:czIn .3s ease}@keyframes czIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cz-hero{max-width:1280px;margin:auto;padding:20px;display:grid;grid-template-columns:1fr 330px;gap:14px}
+.cz-hero-main,.cz-hero-side a{border-radius:20px;overflow:hidden;display:block}.cz-hero-main{min-height:310px}.cz-hero-main img{width:100%;height:100%;min-height:310px;object-fit:cover}.cz-hero-side{display:flex;flex-direction:column;gap:12px}.cz-hero-side img{width:100%;height:149px;object-fit:cover}
+.cz-section{max-width:1280px;margin:auto;padding:28px 20px 0}.cz-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.cz-section-head h2{font-size:21px;font-weight:900;display:flex;align-items:center;gap:10px}.cz-section-head h2 span{width:4px;height:22px;background:linear-gradient(180deg,var(--cz-blue),var(--cz-purple));border-radius:2px}.cz-section-head>a{color:var(--cz-blue);font-size:13px;font-weight:800}
+.cz-wide-banner{width:100%;border-radius:14px;border:1px solid var(--cz-border);transition:.25s}.cz-wide-banner:hover{transform:translateY(-2px)}
+.cz-product-zone{background:transparent}.cz-product-zone salla-products-list{display:block}
+.cz-product-zone .s-block__title{display:none}
+.cz-platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.cz-platforms a{background:var(--cz-card);border:1px solid var(--cz-border);border-radius:14px;padding:17px 18px;display:grid;grid-template-columns:48px 1fr;column-gap:13px;align-items:center;transition:.22s}.cz-platforms a:hover{transform:translateY(-3px);border-color:rgba(26,109,255,.5)}.cz-platforms img{grid-row:span 2;width:42px;height:42px;object-fit:contain}.cz-platforms strong{font-size:14px}.cz-platforms small{color:var(--cz-sec);font-size:11px}
+.cz-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cz-trust-card{background:var(--cz-card);border:1px solid var(--cz-border);border-radius:14px;padding:18px}.cz-trust-card b{display:block;margin-bottom:5px}.cz-trust-card span{font-size:11px;color:var(--cz-sec)}
+.cz-footer{background:#080c16;border-top:1px solid var(--cz-border);margin-top:35px;padding-top:40px}.cz-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.cz-footer h3{font-size:14px;margin-bottom:14px}.cz-footer-brand{font-size:22px;font-weight:900}.cz-footer-desc{color:var(--cz-sec);font-size:12px;line-height:1.8;margin:10px 0 18px}.cz-copyright{border-top:1px solid var(--cz-border);margin-top:35px;padding:15px 0;color:var(--cz-sec);font-size:11px}
+@media(max-width:900px){.cz-hero{grid-template-columns:1fr}.cz-hero-side{display:grid;grid-template-columns:1fr 1fr}.cz-hero-side img{height:130px}.cz-platforms,.cz-trust{grid-template-columns:repeat(2,1fr)}.cz-footer-grid{grid-template-columns:1fr 1fr}.cz-search{max-width:none}}
+@media(max-width:640px){.cz-container{padding:0 12px}.cz-top-links{display:none}.cz-topbar-inner{justify-content:flex-end}.cz-nav-inner{height:60px;gap:8px}.cz-logo{min-width:auto}.cz-logo-text{display:none}.cz-search{order:3;flex-basis:100%}.cz-navbar .cz-nav-inner{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px}.cz-actions{margin-right:auto}.cz-hero{padding:12px;gap:8px}.cz-hero-main,.cz-hero-main img{min-height:190px}.cz-hero-side{gap:8px}.cz-hero-side img{height:95px}.cz-section{padding:22px 12px 0}.cz-section-head h2{font-size:17px}.cz-product-zone{overflow:hidden}.cz-platforms,.cz-trust,.cz-footer-grid{grid-template-columns:1fr 1fr}.cz-footer-grid{gap:20px}.cz-wide-banner{border-radius:10px}}
+
+/* Product-card skin: preserve CardZone dark visual while keeping Salla functionality */
+.cz-product-zone .s-product-card-entry{
+ background:var(--cz-card)!important;border:1px solid var(--cz-border)!important;border-radius:14px!important;overflow:hidden;color:#fff!important;
+ box-shadow:0 4px 24px rgba(0,0,0,.35)!important;
+}
+.cz-product-zone .s-product-card-entry:hover{border-color:rgba(26,109,255,.55)!important;transform:translateY(-4px);transition:.22s}
+.cz-product-zone .s-product-card-content{background:var(--cz-card)!important}
+.cz-product-zone .s-product-card-content-title a{color:#fff!important}
+.cz-product-zone .s-product-card-content-subtitle,.cz-product-zone .s-product-card-rating{color:var(--cz-sec)!important}
+.cz-product-zone .s-product-card-price,.cz-product-zone .s-product-card-starting-price h4,.cz-product-zone .s-product-card-sale-price h4{color:var(--cz-gold)!important}
+.cz-product-zone .s-product-card-content-footer .s-button-element{background:var(--cz-blue)!important;color:#fff!important;border-color:transparent!important}
+.cz-product-zone salla-products-list{--s-product-card-border-color:var(--cz-border)}

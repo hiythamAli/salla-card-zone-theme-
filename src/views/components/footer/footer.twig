@@ -1,0 +1,23 @@
+<footer class="cz-footer" data-testid="store-footer">
+  <div class="cz-container cz-footer-grid">
+    <div>
+      <a href="{{ store.url }}" class="cz-footer-brand">{{ store.name }}</a>
+      {% if store.description %}<div class="cz-footer-desc">{{ store.description|raw }}</div>{% endif %}
+      <salla-social></salla-social>
+    </div>
+    <div>
+      <h3>روابط مهمة</h3>
+      <salla-menu source="footer"></salla-menu>
+    </div>
+    <div>
+      <h3>تواصل معنا</h3>
+      <salla-contacts></salla-contacts>
+    </div>
+    <div>
+      <h3>الدفع الآمن</h3>
+      <salla-payments></salla-payments>
+      <salla-trust-badges></salla-trust-badges>
+    </div>
+  </div>
+  <div class="cz-copyright"><div class="cz-container"><span>{% hook copyright %}</span></div></div>
+</footer>
